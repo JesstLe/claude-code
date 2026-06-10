@@ -1,73 +1,12 @@
-# Claude Code Source Snapshot for Security Research
-
-> This repository mirrors a **publicly exposed Claude Code source snapshot** that became accessible on **March 31, 2026** through a source map exposure in the npm distribution. It is maintained for **educational, defensive security research, and software supply-chain analysis**.
-
----
-
-## Research Context
-
-This repository is maintained by a **university student** studying:
-
-- software supply-chain exposure and build artifact leaks
-- secure software engineering practices
-- agentic developer tooling architecture
-- defensive analysis of real-world CLI systems
-
-This archive is intended to support:
-
-- educational study
-- security research practice
-- architecture review
-- discussion of packaging and release-process failures
-
-Related research writing:
-
-- [Local archive copy — March 9, 2026: “Is legal the same as legitimate: AI reimplementation and the erosion of copyleft”](2026-03-09-is-legal-the-same-as-legitimate-ai-reimplementation-and-the-erosion-of-copyleft.md)
-- [Original publication — Hong Minhee, *Is legal the same as legitimate: AI reimplementation and the erosion of copyleft*](https://writings.hongminhee.org/2026/03/legal-vs-legitimate/)
-
-The essay is dated **March 9, 2026**, so it should be read as companion analysis that predates the **March 31, 2026** source exposure documented below.
-
-## Why this archive exists (and what it is not)
-
-I initially kept this repository as a source-exposure archive so I could study the harness, tool wiring, and agent workflow. After sitting with the legal and ethical questions more seriously—and after reading Hong Minhee's essay—I no longer wanted the README to treat raw legality as the only frame.
-
-This branch therefore takes a smaller and more honest step: it preserves Hong Minhee's essay as companion reading and makes the archive's research-only framing more explicit. This repository is still a mirrored TypeScript source snapshot for analysis; it is **not** a clean-room or Python rewrite.
-
-## Built with `oh-my-codex`
-
-The README/essay archival work on this branch was AI-assisted and orchestrated with Yeachan Heo's [oh-my-codex (OmX)](https://github.com/Yeachan-Heo/oh-my-codex), a workflow layer built around Codex.
-
-- **`$team` mode:** used for coordinated parallel review of repo fit, wording risk, and final architecture consistency.
-- **`$ralph` mode:** used for persistent execution, verification, and final architect sign-off before claiming completion.
-- **Codex-driven workflow:** this documentation/contextualization pass was completed with Codex under OmX orchestration.
-
-It does **not** claim ownership of the original code, and it should not be interpreted as an official Anthropic repository.
-
----
-
-## How the Public Snapshot Became Accessible
-
-[Chaofan Shou (@Fried_rice)](https://x.com/Fried_rice) publicly noted that Claude Code source material was reachable through a `.map` file exposed in the npm package:
-
-> **"Claude code source code has been leaked via a map file in their npm registry!"**
->
-> — [@Fried_rice, March 31, 2026](https://x.com/Fried_rice/status/2038894956459290963)
-
-The published source map referenced unobfuscated TypeScript sources hosted in Anthropic's R2 storage bucket, which made the `src/` snapshot publicly downloadable.
-
----
-
-## Repository Scope
+# Claude Code
 
 Claude Code is Anthropic's CLI for interacting with Claude from the terminal to perform software engineering tasks such as editing files, running commands, searching codebases, and coordinating workflows.
 
-This repository contains a mirrored `src/` snapshot for research and analysis.
-
-- **Public exposure identified on**: 2026-03-31
 - **Language**: TypeScript
 - **Runtime**: Bun
 - **Terminal UI**: React + [Ink](https://github.com/vadimdemedes/ink)
 - **Scale**: ~1,900 files, 512,000+ lines of code
+- **License**: 本项目内容可自由复用、参考和学习
 
 ---
 
@@ -290,12 +229,3 @@ Reusable workflows defined in `skills/` are executed through `SkillTool`. Users 
 ### Plugin Architecture
 
 Built-in and third-party plugins are loaded through the `plugins/` subsystem.
-
----
-
-## Research / Ownership Disclaimer
-
-- This repository is an **educational and defensive security research archive** maintained by a university student.
-- It exists to study source exposure, packaging failures, and the architecture of modern agentic CLI systems.
-- The original Claude Code source remains the property of **Anthropic**.
-- This repository is **not affiliated with, endorsed by, or maintained by Anthropic**.
